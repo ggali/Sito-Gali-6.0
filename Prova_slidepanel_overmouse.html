@@ -3,80 +3,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://v4.pingendo.com/assets/bootstrap/themes/default.css" rel="stylesheet" type="text/css">
-</head><body>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.slidingpanel.css"></head><body>
+<style>
+#panel {
+	width: 500px;
+	background-color: #fff;
+	padding: 10px;
+	margin-top: 15px;
+	border: 1px solid #ccc;
+}
+p {
+	margin: 25px;
+}
+</style>
+<h1>Sliding Panel test page</h1>
+<p>
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+Some normal content. Some normal content. Some normal content. Some normal content. Some normal content. 
+</p>
+<div id="panel">
+	From now, Sliding Panel can be finely positionned. 
+	The position parameter determines on which side 
+	of your container the panel will be. <br>
+	The offset parameter allows you to fine tune the position, 
+	relatively to the sides you wish. You could, for example, 
+	use position: 'right' and offset: {top: '100px'} to make it appear 
+	on the right side, 100px from the top. Have a try !
+</div>
 
-
-
-
-<!--
-<head--><title></title>
-<link rel="stylesheet" type="text/css" href="slider4.css">
-<script language="javascript" type="text/javascript" src="fixOnMouseOut.js"> </script>
-<script type="text/javascript" language="javascript">
-//<![CDATA[
-
-    var startPosition = 0;
-    var stopPosition = -70;
-    var slideAmount = 4;
-    var goingUp = false;
-    var goingDown = false;
-
-    function slideUp(theme,id) {
-
-        // find class to slide
-        //var slidingDiv;
-        //for (i=0; i<theme.childNodes.length; i++){
-        //    if (theme.childNodes[i].nodeName=="DIV") slidingDiv=theme.childNodes[i];
-        //}
-        var slidingDiv = document.getElementById(id);
-
-        slidingDiv.style.display="block"; // show sliding class
-        if ( !goingDown && (parseInt(slidingDiv.style.top) > stopPosition) ) {
-            goingUp = true;
-            slidingDiv.style.top = parseInt(slidingDiv.style.top) + -slideAmount + "px";
-            slidingDiv.style.height = parseInt(slidingDiv.style.height) + slideAmount + "px";
-            setTimeout(function(){ slideUp(theme,id); }, 10);
-        }
-        goingUp=false;
-    }
-
-    function slideDown(theme,id) {
-
-        // find class to slide
-        //var slidingDiv;
-        //for (i=0; i<theme.childNodes.length; i++){
-        //    if (theme.childNodes[i].nodeName=="DIV") slidingDiv=theme.childNodes[i];
-        //}
-        var slidingDiv = document.getElementById(id);
-
-        if ( !goingUp && (parseInt(slidingDiv.style.top) < startPosition) ) {
-            goingDown=true;
-            slidingDiv.style.top = parseInt(slidingDiv.style.top) + slideAmount + "px";
-            slidingDiv.style.height = parseInt(slidingDiv.style.height) + -slideAmount + "px";
-            setTimeout(function(){ slideDown(theme,id); }, 10);
-        }
-        else {
-            slidingDiv.style.display="none"; // hide sliding class
-            goingDown=false;
-        }
-    }
-
-//]]>
+<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="jquery.slidingpanel.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#panel").slidingPanel({
+		position: 'left',
+		offset: {
+			top: '100px'
+		}
+	});
+	
+});
 </script>
 
-
-
-    <div id="theme_frame" onmouseover="slideUp(this,'theme_details');" onmouseout="slideDown(this,'theme_details');">
-        <img src="images/index/marta_milani.png" alt="" id="crap">
-
-        <div id="theme_details" style="display: none; top: 0px; height: 0px;">
-            Feather Info<br>
-            <a href="">Buy It</a><br>
-            <a href="">Try It</a>
-        </div>
-    </div>
-
-
+  
 </body></html>
