@@ -82,98 +82,48 @@ $headings-font-family : Lato;
 @import 'pingendo-bootstrap';
 
 .section .background-video       {
-
-
   object-position : center left !important;
-
-
 }
 
 .section-fill-height       {
-
-
   max-height : 70%;
-
-
 }
 
 .sticky       {
-
-
 	position : -webkit-sticky;
-
-
   position : sticky;
-
-
   top : 0px;
-
-
 }
  
 .navbar       {
-
-
   border-bottom : 1px solid $brand-primary;
-
-
 }
 
 
 .navbar-brand       {
-
-
 	position : relative;
-
-
   top : 12px;
-
-
 }
 
 .navbar.bg-inverse       {
-
-
   background-color : rgba(241, 94, 40, 0.8);
-
-
   background-color : rgba(0, 0, 0,0.7);
-
-
   position : absolute;
-
-
   z-index : 1;
-
-
   width : 100%;
-
-
 }
 
 .navbar .nav img       {
-
-
   height : 36px;
-
-
 }
 
 .navbar .sideborder       {
-
-
   border-left : 1px solid $brand-primary;
-
-  
 }
 
  .azienda 
-{
+{  border : 1px solid $brand-primary;
 
-
-  border : 1px solid $brand-primary;
-
-  
 }
 
 img.grayscale   {
