@@ -188,6 +188,9 @@ img.grayscale   {
   -webkit-filter : grayscale(100%);
 
  /* Chrome 19+ & Safari 6+ */
+ 
+ filter: rgba(0, 0, 0,0.7) 
+  
 }
 
 img.grayscale:hover   {
