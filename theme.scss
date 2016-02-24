@@ -127,7 +127,7 @@ $container-max-widths: (
 
 html {
   height: 100%;
-  font-weight: light !important;
+  font-weight: normal !important;
 }
 
 body > * {
@@ -185,7 +185,7 @@ h1,h2,h3,h4,h5,h6 {
 	position : relative;
 
 
-  top : 12px;
+  top : 20px;
 
 
 }
@@ -210,7 +210,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar .nav img       {
 
 
-  height : 36px;
+  height : 50px;
 
 
 }
