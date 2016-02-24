@@ -4903,7 +4903,7 @@ a.text-danger:hover {
 
 html {
   height: 100%;
-  font-weight: light !important; }
+  font-weight: normal !important; }
 
 body > * {
   max-width: 1700px;
@@ -4931,7 +4931,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand {
   position: relative;
-  top: 12px; }
+  top: 20px; }
 
 .navbar.bg-inverse {
   background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
@@ -4940,7 +4940,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
 
 .navbar .nav img {
-  height: 36px; }
+  height: 50px; }
 
 img.grayscale {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
