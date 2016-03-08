@@ -40,7 +40,7 @@ $gray-light : #818a91 !default;
 $gray-lighter : #eceeef !default;
 $gray-lightest : #F0F0F0 !default;
 
-$brand-primary : #f47e43;
+$brand-primary : red;
 $brand-success : #5cb85c !default;
 $brand-info : $gray;
 $brand-warning : #f0ad4e !default;
@@ -128,9 +128,9 @@ xl: 1240px
 
 
 body {
-  max-width: 1700px;
-  margin:auto;
-  position:relative;
+  max-width : 1700px;
+  margin : auto;
+  position : relative;
 
   @include media-breakpoint-down(sm) {
     .section-fill-height {
@@ -156,44 +156,44 @@ body {
 
 html     {
   height : 100%;
-  background-color: #b8c1c3;
+  background-color : #b8c1c3;
   font-weight : normal !important;
 }
 
 .lead {
-  font-weight: normal;
+  font-weight : normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 100;
+  font-weight : 100;
 }
 
 .section .background-image {
-  z-index: 0;
+  z-index : 0;
 }
 .section .background-video           {
   object-position : center left !important;
 }
 
 .section .background-video-holder:after {
-  position:absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height: 100%;
-  content: url(#);
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  height : 100%;
+  content : url(#);
   background : linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .section-fill-height .carousel-item img {
   object-position : center left !important;
-  object-fit: cover;
-  width: 100%;
+  object-fit : cover;
+  width : 100%;
   height : 100%;
 }
 .section-fill-height           {
   max-height : 80%;
-  overflow: hidden;
+  overflow : hidden;
 }
 
 .sticky           {
@@ -295,10 +295,10 @@ img.grayscale:hover       {
 }
 
 #persone .card     {
-  overflow: hidden;
-  cursor:pointer;
-  padding-top:18px;
-  border-color: transparent;
+  overflow : hidden;
+  cursor : pointer;
+  padding-top : 18px;
+  border-color : transparent;
 
   .card-block {
     position: absolute;
@@ -322,7 +322,7 @@ img.grayscale:hover       {
   background-color : black;
   overflow-y : scroll;
   height : 100%;
-  cursor: zoom-out;
+  cursor : zoom-out;
 	
   > .btn-group {
     position: fixed;
@@ -341,11 +341,11 @@ img.grayscale:hover       {
 }
 
 .modal-lg {
- max-width: 580px;
+ max-width : 580px;
 }
 
 .modal-content {
-  background-color: $gray-dark;
+  background-color : $gray-dark;
 
   p {
     line-height: 200%
@@ -353,11 +353,11 @@ img.grayscale:hover       {
 }
 
 .modal-header img {
-  height: 25px;
+  height : 25px;
 }
 
 hr.light {
-  height: 1px;
-  background-color: gray;
-  border: none;
+  height : 1px;
+  background-color : gray;
+  border : none;
 }
