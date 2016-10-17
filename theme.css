@@ -5062,7 +5062,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100; }
 
 .menu {
-  font-size: 70%; }
+  font-size: 70%;
+  line-height: 200%; }
 
 .section .background-image {
   z-index: 0; }
