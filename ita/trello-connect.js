@@ -144,7 +144,7 @@ $(window).on("ready", function() {
   });
   
   // go to top
-  $("body").append('<a href="#top" class="go-top"><i class="fa fa-fw fa-angle-up"></i></a>');
+  $("body").append('<a href="#top" class="go-top"><i class="fa fa-fw fa-arrow-up"></i></a>');
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
     if (scroll >= 150) {
