@@ -235,15 +235,19 @@ font-size:70%;
 
 
 .navbar {
-  &.bg-inverse           {
 
+  &.scrolled {
+    position: fixed; 
+  }
+  
+  &.bg-inverse  {  
     z-index : 1;
     width : 100%;
     background : transparent !important;
 	}
   
   &.bg-dark {
-  background: $gray-dark
+	  background: $gray-dark
   }
 }
 
