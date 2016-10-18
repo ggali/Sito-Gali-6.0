@@ -5116,13 +5116,32 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 0px; }
 
-.navbar.scrolled {
-  position: fixed; }
+
 
 .navbar.bg-inverse {
+  position: absolute;
   z-index: 1;
   width: 100%;
-  background: transparent !important; }
+  background: transparent !important; 
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .navbar.scrolled {
+    padding: 0px !important;
+    position: fixed;
+    background-color: rgba(55,58,60,0.8) !important;
+  }
+
+  .navbar.scrolled .container {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.0rem !important;
+  }
+
+}
+
+
+
 
 .navbar.bg-dark {
   background: #373a3c; }

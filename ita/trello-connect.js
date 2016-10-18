@@ -146,10 +146,10 @@ $(window).on("ready", function() {
   // add special class for navbar based on scroll position
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > 0) 
-      $("navbar").first().addClass("scrolled");
+    if (scroll > 16) 
+      $(".navbar").first().addClass("scrolled");
     else
-      $("navbar").first().removeClass("scrolled");
+      $(".navbar").first().removeClass("scrolled");
 
   });
 
