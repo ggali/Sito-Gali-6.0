@@ -1,4 +1,17 @@
 
+
+
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:312544,hjsv:5};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+
+
 // Variabili di configurazione
 var markscale = 10;   // percentuale larghezza watermark rispetto all'immagine
 var markpad = 10;     // padding watermark
@@ -143,6 +156,16 @@ $(window).on("ready", function() {
     // FB.getLoginStatus(updateStatusCallback);
   });
   
+  // add special class for navbar based on scroll position
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 16) 
+      $(".navbar").first().addClass("scrolled");
+    else
+      $(".navbar").first().removeClass("scrolled");
+
+  });
+
   // go to top
   $("body").append('<a href="#top" class="m-a-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-a-0" style="font-size:10px; line-height:10px">SU</label></a>');
   $(window).scroll(function(event) {
@@ -306,7 +329,7 @@ $(window).on("ready", function() {
       
       // we have a card
       // check video
-      if (card.desc.indexOf("player.vimeo.com") > 0) {
+      if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
         var $embed = $('<div class="embed-responsive embed-responsive-16by9"></div>');
         var $iframe = $('<iframe class="m-t-1"></iframe>');
