@@ -143,6 +143,16 @@ $(window).on("ready", function() {
     // FB.getLoginStatus(updateStatusCallback);
   });
   
+  // add special class for navbar based on scroll position
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 0) 
+      $("navbar").first().addClass("scrolled");
+    else
+      $("navbar").first().removeClass("scrolled");
+
+  });
+
   // go to top
   $("body").append('<a href="#top" class="m-a-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-a-0" style="font-size:10px; line-height:10px">SU</label></a>');
   $(window).scroll(function(event) {
