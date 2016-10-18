@@ -5124,6 +5124,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   background: transparent !important; 
   transition: all 0.5s ease;
+  border-radius: 0px;
 }
 
 @media (min-width: 768px) {
@@ -5131,6 +5132,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px !important;
     position: fixed;
     background-color: rgba(55,58,60,0.8) !important;
+    max-width: 1700px;
   }
 
   .navbar.scrolled .container {
