@@ -5117,7 +5117,6 @@ h1, h2, h3, h4, h5, h6 {
   top: 0px; }
 
 .navbar.bg-inverse {
-  position: absolute;
   z-index: 1;
   width: 100%;
   background: transparent !important; }
