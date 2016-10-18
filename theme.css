@@ -5048,7 +5048,20 @@ body {
       -webkit-align-items: center; } }
 
 #photos .container {
-  max-width: 940px; }
+  max-width: 940px; 
+}
+
+
+
+
+@media (max-width: 544px) {
+  #photos .container img {
+    pointer-events: none;
+  }
+
+}
+
+
 
 html {
   height: 100%;
