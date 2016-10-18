@@ -329,7 +329,7 @@ $(window).on("ready", function() {
       
       // we have a card
       // check video
-      if (card.desc.indexOf("player.vimeo.com") > 0) {
+      if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
         var $embed = $('<div class="embed-responsive embed-responsive-16by9"></div>');
         var $iframe = $('<iframe class="m-t-1"></iframe>');
