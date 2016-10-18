@@ -331,8 +331,8 @@ $(window).on("ready", function() {
       // check video
       if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
-        var $embed = $('<div class="embed-responsive embed-responsive-16by9"></div>');
-        var $iframe = $('<iframe class="m-t-1"></iframe>');
+        var $embed = $('<div class="m-t-1 embed-responsive embed-responsive-16by9"></div>');
+        var $iframe = $('<iframe ></iframe>');
         $iframe.attr("src", card.desc);
         $embed.append($iframe);
         $clone.find("img").replaceWith($embed);
