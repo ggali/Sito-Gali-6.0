@@ -5128,6 +5128,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   border-radius: 0px; }
 
+.navbar.bg-black {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: #373a3c !important;
+  transition: all 0.5s ease;
+  border-radius: 0px; }
+
 @media (min-width: 768px) {
   .navbar.scrolled {
     padding: 0px !important;
@@ -5203,7 +5211,6 @@ img.grayscale:hover {
   border-color: transparent; }
   #persone .card .card-block {
     position: absolute;
-    z-index: 100;
     bottom: -20px;
     width: 100%;
     color: white;
