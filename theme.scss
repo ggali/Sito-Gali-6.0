@@ -274,7 +274,6 @@ font-size:70%;
 }
 
 
-
 .navbar .nav {
   a {
       color: white !important;
@@ -319,9 +318,9 @@ img.grayscale:hover       {
   display : block;
   line-height : 30px;
   text-align : center;
-  font-size : 20px;
+  font-size : 40px;
   position : fixed;
-  bottom : -30px;
+  bottom : -70px;
   right : 20px;
   padding : 5px;
   -webkit-transition : all 0.5s ease;
@@ -337,7 +336,7 @@ img.grayscale:hover       {
 }
 
 .go-top.show       {
-  bottom : 30px;
+  bottom : 20px;
 }
 
 .go-top:hover, .go-top:focus       {
