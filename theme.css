@@ -5197,7 +5197,8 @@ img.grayscale:hover {
   bottom: 20px; }
 
 .go-top:hover, .go-top:focus {
-  background-color: #f47e43; }
+  background-color: #db713c;
+  color: #FFF; }
 
 .gray {
   background-color: #373a3c;
