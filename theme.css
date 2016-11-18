@@ -5179,7 +5179,7 @@ img.grayscale:hover {
   text-align: center;
   font-size: 20px;
   position: fixed;
-  bottom: -30px;
+  bottom: -40px;
   right: 20px;
   padding: 5px;
   -webkit-transition: all 0.5s ease;
@@ -5194,11 +5194,10 @@ img.grayscale:hover {
   border-radius: 2px; }
 
 .go-top.show {
-  bottom: 30px; }
+  bottom: 20px; }
 
 .go-top:hover, .go-top:focus {
-  background-color: #f47e43;
-  color: #FFFFFF; }
+  background-color: #f47e43; }
 
 .gray {
   background-color: #373a3c;
