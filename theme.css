@@ -5272,6 +5272,14 @@ p.CTA {
 .primobianco {
   background-color: white; }
 
+.overlay_map {
+  background: transparent;
+  position: relative;
+  width: 1250px;
+  height: 250px;
+  top: 250px;
+  margin-top: -250px; }
+
 /* FIXES SPECIFICI PER DEVICES */
 body .no-videoautoplay {
   display: none; }
