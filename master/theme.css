@@ -1447,7 +1447,7 @@ pre {
   left: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu {
+.float-right > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -4409,7 +4409,7 @@ a.bg-danger:hover {
 .pull-left {
   float: left !important; }
 
-.pull-right {
+.float-right {
   float: right !important; }
 
 .pull-none {
