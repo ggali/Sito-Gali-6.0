@@ -167,7 +167,7 @@ $(window).on("ready", function() {
   });
 
   // go to top
-  $("body").append('<a href="#top" class="m-a-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-a-0" style="font-size:10px; line-height:10px">SU</label></a>');
+  $("body").append('<a href="#top" class="m-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-0" style="font-size:10px; line-height:10px">SU</label></a>');
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
     if (scroll >= 150) {
@@ -394,7 +394,7 @@ $(window).on("ready", function() {
 
       // create the wrapper and the full width image
       var $wrapper = $("<div class='full-screen'>\
-                          <div class='btn-group m-t-1 m-x-1  float-right'>\
+                          <div class='btn-group m-t-1 mx-1  float-right'>\
                             <label class='btn btn-info' style='pointer-events:none'>N° " + index + "</label>\
                             <div class='btn-group'>\
                               <button class='btn btn-info fa fa-chain' data-toggle='dropdown'></button>\
