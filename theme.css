@@ -6226,11 +6226,11 @@ a.text-gray-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-.hidden-up {
+.hidden-xs-up {
   display: none !important; }
 
 @media (max-width: 575px) {
-  .hidden-down {
+  .hidden-xs-down {
     display: none !important; } }
 
 @media (min-width: 576px) {
