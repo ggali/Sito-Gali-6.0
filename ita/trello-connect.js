@@ -331,7 +331,7 @@ $(window).on("ready", function() {
       // check video
       if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
-        var $embed = $('<div class="mt-1 embed-responsive embed-responsive-16by9"></div>');
+        var $embed = $('<div class="mt-2 embed-responsive embed-responsive-16by9"></div>');
         var $iframe = $('<iframe ></iframe>');
         $iframe.attr("src", card.desc);
         $embed.append($iframe);
@@ -394,11 +394,11 @@ $(window).on("ready", function() {
 
       // create the wrapper and the full width image
       var $wrapper = $("<div class='full-screen'>\
-                          <div class='btn-group mt-1 mx-1  float-right'>\
+                          <div class='btn-group mt-2 mx-2  float-right'>\
                             <label class='btn btn-info' style='pointer-events:none'>N° " + index + "</label>\
                             <div class='btn-group'>\
                               <button class='btn btn-info fa fa-chain' data-toggle='dropdown'></button>\
-                              <div class='dropdown-menu dropdown-menu-right p-1'>\
+                              <div class='dropdown-menu dropdown-menu-right p-2'>\
                                 <input type='text' size='50' value='"+ document.location +"'>\
                               </div>\
                             </div>\
