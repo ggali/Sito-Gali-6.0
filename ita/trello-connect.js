@@ -167,7 +167,7 @@ $(window).on("ready", function() {
   });
 
   // go to top
-  $("body").append('<a href="#top" class="m-a-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-a-0" style="font-size:10px; line-height:10px">SU</label></a>');
+  $("body").append('<a href="#top" class="m-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-0" style="font-size:10px; line-height:10px">SU</label></a>');
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
     if (scroll >= 150) {
@@ -331,7 +331,7 @@ $(window).on("ready", function() {
       // check video
       if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
-        var $embed = $('<div class="m-t-1 embed-responsive embed-responsive-16by9"></div>');
+        var $embed = $('<div class="mt-2 embed-responsive embed-responsive-16by9"></div>');
         var $iframe = $('<iframe ></iframe>');
         $iframe.attr("src", card.desc);
         $embed.append($iframe);
@@ -394,11 +394,11 @@ $(window).on("ready", function() {
 
       // create the wrapper and the full width image
       var $wrapper = $("<div class='full-screen'>\
-                          <div class='btn-group m-t-1 m-x-1  pull-xs-right'>\
+                          <div class='btn-group mt-2 mx-2  float-right'>\
                             <label class='btn btn-info' style='pointer-events:none'>N° " + index + "</label>\
                             <div class='btn-group'>\
                               <button class='btn btn-info fa fa-chain' data-toggle='dropdown'></button>\
-                              <div class='dropdown-menu dropdown-menu-right p-a-1'>\
+                              <div class='dropdown-menu dropdown-menu-right p-2'>\
                                 <input type='text' size='50' value='"+ document.location +"'>\
                               </div>\
                             </div>\
