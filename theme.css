@@ -5136,6 +5136,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   border-radius: 0px; }
 
+.navbar .container {
+  transition: all 0.5s; }
+
 @media (min-width: 768px) {
   .navbar.scrolled {
     padding: 0px !important;
