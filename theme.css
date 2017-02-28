@@ -5144,7 +5144,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px !important;
     position: fixed;
     background-color: rgba(55, 58, 60, 0.9) !important;
-    max-width: 1700px; }
+    max-width: 1700px;
+    height: 74px; }
   .navbar.scrolled .container {
     margin-top: 0.0rem !important;
     margin-bottom: 0.0rem !important;
