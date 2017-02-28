@@ -5136,21 +5136,39 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   border-radius: 0px; }
 
+.navbar .container {
+  transition: all 0.5s; }
+
 @media (min-width: 768px) {
   .navbar.scrolled {
     padding: 0px !important;
     position: fixed;
     background-color: rgba(55, 58, 60, 0.9) !important;
-    max-width: 1700px; }
+    max-width: 1700px;
+    height: 74px; }
   .navbar.scrolled .container {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.0rem !important; } }
+    margin-top: 0.0rem !important;
+    margin-bottom: 0.0rem !important;
+    transform: scale(0.8); } }
 
 .navbar .nav a {
   color: white !important; }
 
 .navbar .nav .active {
-  border-bottom: 3px solid #f47e43; }
+  border-bottom: 3px solid #f47e43;
+  z-index: 10; }
+  .navbar .nav .active a {
+    color: white !important; }
+
+.navbar .nav .active2::before {
+  width: 100px;
+  height: 100px;
+  background-color: #f47e43;
+  display: block;
+  position: absolute;
+  top: 0px;
+  content: '';
+  z-index: 9; }
 
 .navbar .nav img {
   height: 36px; }
