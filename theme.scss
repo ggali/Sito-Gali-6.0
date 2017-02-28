@@ -261,12 +261,14 @@ font-size:70%;
 .navbar .container {
   transition: all 0.5s;
 }
+
 @media (min-width: 768px) {
   .navbar.scrolled {
     padding: 0px !important;
     position: fixed;
     background-color: rgba(55,58,60,0.9) !important;
     max-width: 1700px;
+    height: 74px;
   }
 
   .navbar.scrolled .container {
