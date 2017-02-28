@@ -267,7 +267,7 @@ font-size:70%;
   }
 
   .navbar.scrolled .container {
-    margin-top: 0.5rem !important;
+    margin-top: 0.0rem !important;
     margin-bottom: 0.0rem !important;
   }
 
@@ -280,7 +280,23 @@ font-size:70%;
     }
     .active {
       border-bottom: 3px solid $brand-primary;
+      z-index:10;
+      a {
+        color: white !important; 
+      }
     }
+  
+  .active2::before {
+		width:100px;
+    height: 100px;
+    background-color: $brand-primary;
+    display: block;
+    position:absolute;
+    top:0px;
+    content:'';
+    z-index:9;
+    }
+  
 	img {
   height : 36px;
 	}
@@ -289,6 +305,7 @@ font-size:70%;
 .navbar .nav-dark {
   .active {
       border-bottom: 3px solid $brand-primary;
+
     }
 }
 
