@@ -329,6 +329,9 @@ $(window).on("ready", function() {
       
       // we have a card
       // check video
+
+
+
       if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
         var $embed = $('<div class="m-t-1 embed-responsive embed-responsive-16by9"></div>');
@@ -354,6 +357,17 @@ $(window).on("ready", function() {
       $clone.find("img").attr("src", url);
       $clone.find("img").attr("alt", card.name);
 
+
+      // we got a link
+      if (card.desc.indexOf(".html") != -1) {
+        $clone.find("img").wrap($("<a href='" + card.desc + "'></a>"));
+        $clone.find("img").css("cursor", "pointer");
+      } else {
+        $clone.find("img").on("click", function() {
+          zoomImage(this);
+        });
+      }
+
       if (cardNumber > imagesLimit)
           $clone.hide();
 
@@ -374,6 +388,16 @@ $(window).on("ready", function() {
         // var firstUrl = $col.find("img").attr("src");
         // $col.find("img").attr("src", firstUrl);
         $secondCol.find("img").attr("alt", card.name);
+
+        if (card.desc.indexOf(".html") != -1) {
+          $secondCol.find("img").wrap($("<a href='" + card.desc + "'></a>"));
+        } else {
+          $secondCol.find("img").on("click", function() {
+            zoomImage(this);
+          });
+        }
+
+
         $col.after($secondCol);
       }
       // zoom
@@ -457,9 +481,7 @@ $(window).on("ready", function() {
       
     }
 
-    $model.parent().find("img").on("click", function() {
-      zoomImage(this);
-    });
+  
 
 
     try {
