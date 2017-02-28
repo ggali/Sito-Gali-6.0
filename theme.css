@@ -5143,14 +5143,27 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(55, 58, 60, 0.9) !important;
     max-width: 1700px; }
   .navbar.scrolled .container {
-    margin-top: 0.5rem !important;
+    margin-top: 0.0rem !important;
     margin-bottom: 0.0rem !important; } }
 
 .navbar .nav a {
   color: white !important; }
 
 .navbar .nav .active {
-  border-bottom: 3px solid #f47e43; }
+  border-bottom: 3px solid #f47e43;
+  z-index: 10; }
+  .navbar .nav .active a {
+    color: white !important; }
+
+.navbar .nav .active2::before {
+  width: 100px;
+  height: 100px;
+  background-color: #f47e43;
+  display: block;
+  position: absolute;
+  top: 0px;
+  content: '';
+  z-index: 9; }
 
 .navbar .nav img {
   height: 36px; }
