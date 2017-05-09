@@ -485,11 +485,10 @@ $(window).on("ready", function() {
 
 
     try {
-      var index = Number(document.location.hash.replace("#", ""));
-      if (index != 0)
+      var index = parseInt(document.location.hash.replace("#", ""));
+      if (isNaN(index) == false) 
         zoomImage($model.parent().find("img")[index]);
-    } catch(e) {
-    }
+    } catch(e) {}
    
    $model.hide();
     

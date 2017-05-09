@@ -194,7 +194,7 @@ font-size:70%;
   width:100%;
   height: 100%;
   content: '';
-  background : linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
+  background : linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 .section .background-image:after {
@@ -466,6 +466,10 @@ p.CTA  {
 
 .primobianco {
   background-color: rgba(255,255,255,1);
+}
+
+.primogrigio {
+  background-color: rgba(239,239,239,1);
 }
 
 .overlay_map {
