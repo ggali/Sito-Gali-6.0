@@ -129,7 +129,7 @@ $(window).on("ready", function() {
   }
   
   if ($(".section-fill-height video").length) {
-    $(".section-fill-height video")[0].play();
+    //$(".section-fill-height video")[0].play();
     $(".section-fill-height video").on("playing", function() {
       $(".section-fill-height a.need-video").remove();
     });  
