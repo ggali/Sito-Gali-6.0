@@ -18,7 +18,6 @@ var markpad = 10;     // padding watermark
 var markurl = "https://raw.githubusercontent.com/ggali/Sito-Gali-7.0/master/assets/icone/galimberti_watermark_white.png";
 var imagesLimit = 50;
 
-
 // init scrolldepth
 jQuery.scrollDepth({
   pixelDepth: false,
@@ -330,8 +329,6 @@ $(window).on("ready", function() {
       // we have a card
       // check video
 
-
-
       if (card.desc.indexOf("player.vimeo.com") > 0 || card.desc.indexOf("www.youtube.com") > 0) {
         var $clone = $model.clone();
         var $embed = $('<div class="m-t-1 embed-responsive embed-responsive-16by9"></div>');
@@ -344,7 +341,7 @@ $(window).on("ready", function() {
           $clone.hide();
 
         $clone.insertBefore($btnLoadMore);
-      
+        $clone.find("span").text("");
         return;
       }
 
@@ -372,6 +369,10 @@ $(window).on("ready", function() {
           $clone.hide();
 
       $clone.insertBefore($btnLoadMore);
+      var index = $clone.parent().find("img").index($clone.find("img")[0]);
+      $clone.find("span").text(index);
+      
+      // $clone.find("div").append("<span class='mt-2' style='color:rgba(255,255,255,0.7);font-size:90%;position: absolute;top: 0px;right: 24px;'>" + index + "</span>");
 
       // if two col
       if (card.attachments.length > 1) {
@@ -399,6 +400,11 @@ $(window).on("ready", function() {
 
 
         $col.after($secondCol);
+
+        var index = $clone.parent().find("img").index($secondCol.find("img")[0]);
+        $secondCol.find("span").text(index);
+        // var index = $clone.parent().find("img").index($secondCol.find("img"));
+        // $secondCol.append("<span class='photo-number'>" + index + "</span>");
       }
       // zoom
     });
