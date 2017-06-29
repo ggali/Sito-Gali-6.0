@@ -293,7 +293,7 @@ font-size:70%;
     }
   
   .active2::before {
-		width:100px;
+    width:100px;
     height: 100px;
     background-color: $brand-primary;
     display: block;
@@ -303,9 +303,9 @@ font-size:70%;
     z-index:9;
     }
   
-	img {
+  img {
   height : 36px;
-	}
+  }
 }
 
 .navbar .nav-dark {
@@ -389,7 +389,7 @@ font-size:70%;
   overflow-y : scroll;
   height : 100%;
   cursor: zoom-out;
-	
+  
   > .btn-group {
     position: fixed;
     top: 10px; 
@@ -420,7 +420,7 @@ font-size:70%;
 
 .modal-content {
   background-color: $gray-dark;
-	
+  
   
   p {
     line-height: 200%
