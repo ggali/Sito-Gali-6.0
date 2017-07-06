@@ -1,3 +1,31 @@
+@font-face { 
+  font-family: 'Proxima';
+  font-style: normal;
+  font-weight: normal;
+  src: url('ProximaNova-Regular.otf') format('truetype');
+}  
+
+@font-face {
+  font-family: 'Proxima';
+  font-style: normal;
+  font-weight: bold;
+  src: url('ProximaNova-Semibold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proxima';
+  font-style: normal;
+  font-weight: light;
+  src: url('ProximaNova-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proxima';
+  font-style: normal;
+  font-weight: 100;
+  src: url('ProximaNova-Thin.ttf') format('truetype');
+}
+
 $body-bg: white;
 
 $theme-colors: (
@@ -14,6 +42,9 @@ $theme-colors: (
 $body-color: #373a3c;
 
 $link-color: #f47e43;
+
+$font-family-base: "Proxima";
+$headings-font-weight: 100;
 
 
 /*!
@@ -1346,7 +1377,7 @@ $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
 
-$text-muted: $gray-light !default;
+$text-secondary: $gray-light !default;
 
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
@@ -3625,7 +3656,7 @@ select.form-control-lg {
 
   &.disabled {
     .form-check-label {
-      color: $text-muted;
+      color: $text-secondary;
     }
   }
 }
@@ -5475,7 +5506,7 @@ table {
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
-  color: $text-muted;
+  color: $text-secondary;
   text-align: left;
   caption-side: bottom;
 }
@@ -6533,5 +6564,11 @@ mark,
 }
 
 .bg-dark {
-  color: #818a91;
+  color: theme-color("secondary");
+}
+
+hr.light {
+  height: 1px;
+  border: none;
+  background-color: #818a91; 
 }
