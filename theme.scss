@@ -2,10 +2,10 @@ $body-bg: white;
 
 $theme-colors: (
   primary: #f47e43,
- 	secondary: #333,
+ 	secondary: #818a91,
  	success:#51cf66,
  	warning:orange,
- 	 danger:red,
+ 	danger:red,
   info: #3bc9db,
   light: #f7f7f7,
  	dark: #373a3c
@@ -6515,7 +6515,7 @@ mark,
   -moz-transition : all 0.5s ease;
   -o-transition : all 0.5s ease;
   transition : all 0.5s ease;
-  background-color : $primary;
+  background-color : theme-color("primary");
   color : white;
   text-decoration : none;
   -moz-border-radius : 2px;
@@ -6530,4 +6530,8 @@ mark,
 .go-top:hover, .go-top:focus       {
   background-color : #aa582e;
   color : white;
+}
+
+.bg-dark {
+  color: #818a91;
 }
