@@ -2,7 +2,7 @@
   font-family: 'Proxima';
   font-style: normal;
   font-weight: normal;
-  src: url("ProximaNova-Regular.otf") format("truetype"); }
+  src: url("ProximaNo-Regular.otf") format("truetype"); }
 
 @font-face {
   font-family: 'Proxima';
@@ -6043,6 +6043,7 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
+/* Custom rules per Sito-Gali-7.0 */
 body {
   max-width: 1700px;
   margin: auto;
@@ -6068,6 +6069,13 @@ html {
   height: 100%;
   background-color: #b8c1c3;
   font-weight: normal !important; }
+
+.bg-dark {
+  color: #818a91; }
+
+.menu {
+  font-size: 70%;
+  line-height: 200%; }
 
 .go-top {
   display: block;
@@ -6095,9 +6103,6 @@ html {
 .go-top:hover, .go-top:focus {
   background-color: #aa582e;
   color: white; }
-
-.bg-dark {
-  color: #818a91; }
 
 hr.light {
   height: 1px;
