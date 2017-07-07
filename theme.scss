@@ -6619,3 +6619,82 @@ hr.light {
   }
 }
 
+.trello img      {
+  cursor : zoom-in;
+}
+
+#persone .card     {
+  overflow: hidden;
+  cursor:pointer;
+  padding-top:18px;
+  border-color: transparent;
+
+  .card-block {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    color: white;
+    background : linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
+   }  
+}
+
+.full-screen       {
+
+  z-index : 100000;
+  position : fixed;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  background-color : black;
+  overflow-y : scroll;
+  height : 100%;
+  cursor: zoom-out;
+  
+  > .btn-group {
+    position: fixed;
+    top: 10px; 
+    right: 1px;
+  } 
+
+  .dropdown-menu-right {
+    right: -90px;
+  }
+
+  img { 
+    width:100%;
+  }
+}
+
+.modal-lg {
+ max-width: 580px;
+}
+
+.modal {
+  .close {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    color: white !important;
+  }
+}
+
+.modal-content {
+  background-color: $gray-dark;
+  
+  
+  p {
+    line-height: 200%
+  }  
+}
+
+.modal-header img {
+  height: 25px;
+}
+
+.primoscuro {
+  background-color: rgba(0,0,0,0.065);
+}
+
+.primoarancio {
+  background-image: url('https://galimberti-git.imgix.net/assets/primolegno/Pattern_primoarancio.png?q=30');
+}
