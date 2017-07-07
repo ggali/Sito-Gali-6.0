@@ -6166,3 +6166,9 @@ hr.light {
 
 .modal-header img {
   height: 25px; }
+
+.primoscuro {
+  background-color: rgba(0, 0, 0, 0.065); }
+
+.primoarancio {
+  background-image: url("https://galimberti-git.imgix.net/assets/primolegno/Pattern_primoarancio.png?auto=compress,format"); }
