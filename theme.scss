@@ -204,3 +204,19 @@ html     {
 .primochiaro {
   background-image: url('https://galimberti-git.imgix.net/assets/primolegno/Pattern_primochiaro.png?auto=compress,format');
 }
+
+.cover-image {  
+ background-position: center;
+  overflow:hidden;
+    position:relative;
+    > *:first-child:before {
+      content:'';
+      width:100%;
+      height:100%;
+      display:block;
+      position:absolute;
+      left:0px;
+      top:0px;
+      background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
+    }
+}
