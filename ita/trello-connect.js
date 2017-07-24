@@ -15,8 +15,8 @@
 // Variabili di configurazione
 var markscale = 10;   // percentuale larghezza watermark rispetto all'immagine
 var markpad = 10;     // padding watermark
-var markurl = "https://raw.githubusercontent.com/ggali/Sito-Gali-7.0/master/assets/icone/galimberti_watermark_white.png";
-var imagesLimit = 50;
+var markurl = "https://raw.githubusercontent.com/ggali/Sito-Gali-7.0/master/assets/azienda/galimberti_watermark_white.png";
+var imagesLimit = 25;
 
 // init scrolldepth
 jQuery.scrollDepth({
@@ -122,18 +122,18 @@ $(window).on("ready", function() {
 
 
   // try to start video and connect play button
-  var _playing = false; 
+  var _playing = false;
   window.toggleVideo = function() {
     $('video')[0].play();
   }
-  
+
   if ($(".section-fill-height video").length) {
     $(".section-fill-height video")[0].play();
     $(".section-fill-height video").on("playing", function() {
       $(".section-fill-height a.need-video").remove();
-    });  
+    });
   }
-  
+
 
   // $(".section-fill-height video").on("pause", function() {
   //   _playing = false;
@@ -154,11 +154,11 @@ $(window).on("ready", function() {
     // $('#loginbutton,#feedbutton').removeAttr('disabled');
     // FB.getLoginStatus(updateStatusCallback);
   });
-  
+
   // add special class for navbar based on scroll position
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > 16) 
+    if (scroll > 16)
       $(".navbar").first().addClass("scrolled");
     else
       $(".navbar").first().removeClass("scrolled");
@@ -187,9 +187,9 @@ $(window).on("ready", function() {
   // video autoplay autostop
   var timeout = null;
   $(window).scroll(function() {
-    if (timeout) 
+    if (timeout)
       clearTimeout(timeout);
-    
+
     timeout = setTimeout(function() {
       $('.trello iframe').each(function() {
 
@@ -227,7 +227,7 @@ $(window).on("ready", function() {
 
     var $model = $section.find(".trello");
     // $model.hide();
-    
+
     var extractPhoneNumber = function(val) {
       var i = val.indexOf("+");
       if (i > -1)
@@ -239,7 +239,7 @@ $(window).on("ready", function() {
       try {
         if (card.idList != idList)
         return;
-        
+
         console.log(card);
         var $copy = $model.clone();
         var parts = card.desc.split("\n");
@@ -252,7 +252,7 @@ $(window).on("ready", function() {
 
         history.pushState({}, "page 2", "index.html");
 
-        $(window).on('popstate', function() { 
+        $(window).on('popstate', function() {
           $(".modal").modal('hide');
         });
 
@@ -265,10 +265,10 @@ $(window).on("ready", function() {
         $modalCopy.attr("id", card.id);
         $modalCopy.find(".nome_contatti").text(card.name);
         $modalCopy.find(".ruolo_contatti span").text(parts[0]);
-        
+
         $modalCopy.find(".tel-it span").text(parts[1]);
         $modalCopy.find(".tel-it").attr("href", "tel:" + extractPhoneNumber(parts[1]));
-        
+
         if (parts.length == 4) {
           $modalCopy.find(".tel-ch span").text(parts[2]);
           $modalCopy.find(".tel-ch").attr("href", "tel:" + extractPhoneNumber(parts[2]));
@@ -279,7 +279,7 @@ $(window).on("ready", function() {
         $modalCopy.find(".email").attr("href", "mailto:" + parts[parts.length-1]);
         $modalCopy.find(".email span").text(parts[parts.length-1]);
 
-        $modal.after($modalCopy);  
+        $modal.after($modalCopy);
       } catch(e) {}
     });
   }
@@ -289,7 +289,7 @@ $(window).on("ready", function() {
   $.getJSON( "./trello.json", function( data ) {
     var items = [];
     buildPersone(data);
-    
+
     var idList = null;
     // find the id list
     var url = window.location.pathname;
@@ -306,12 +306,12 @@ $(window).on("ready", function() {
       return;
 
     var resolution = Math.max(window.screen.width, window.screen.height);
-    if (resolution > 940) 
+    if (resolution > 940)
       resolution = 940;
 
     var $model = $(".trello");
     var $btnLoadMore = $("#trello-load-more");
-    
+
     $btnLoadMore.on("click", function() {
       $btnLoadMore.hide();
       $(".trello").show();
@@ -323,9 +323,9 @@ $(window).on("ready", function() {
     $.each(data.cards, function( key, card ) {
       if (card.idList != idList)
         return;
-      
+
       cardNumber++;
-      
+
       // we have a card
       // check video
 
@@ -371,7 +371,7 @@ $(window).on("ready", function() {
       $clone.insertBefore($btnLoadMore);
       var index = $clone.parent().find("img").index($clone.find("img")[0]);
       $clone.find("span").text(index);
-      
+
       // $clone.find("div").append("<span class='mt-2' style='color:rgba(255,255,255,0.7);font-size:90%;position: absolute;top: 0px;right: 24px;'>" + index + "</span>");
 
       // if two col
@@ -409,7 +409,7 @@ $(window).on("ready", function() {
       // zoom
     });
 
-    if (cardNumber <= imagesLimit) 
+    if (cardNumber <= imagesLimit)
       $btnLoadMore.hide();
 
     // show load more button if we have more the img/page limit
@@ -437,11 +437,11 @@ $(window).on("ready", function() {
                             <a class='btn btn-info fa fa-close'></a>\
                           </div>\
                         </div>");
-      
+
       var $img = $("<img>");
       $img.attr("src", $(img).attr("src"));
       $wrapper.append($img);
-      
+
       $wrapper.find(".fa-facebook").on("click", function() {
         FB.ui(
         {
@@ -463,7 +463,7 @@ $(window).on("ready", function() {
         window.history.pushState(null, "", "#");
       });
 
-      $(window).on('popstate', function() { 
+      $(window).on('popstate', function() {
           $("body").removeClass("noscroll");
         $wrapper.remove();
         // window.history.pushState(null, "", "#");
@@ -484,10 +484,10 @@ $(window).on("ready", function() {
         $wrapper.remove();
         window.history.pushState(null, "", "#");
       });
-      
+
     }
 
-  
+
 
 
     try {
@@ -496,9 +496,9 @@ $(window).on("ready", function() {
         zoomImage($model.parent().find("img")[index]);
     } catch(e) {
     }
-   
+
    $model.hide();
-    
+
   });
 
 });
