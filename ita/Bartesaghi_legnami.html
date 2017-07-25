@@ -11,11 +11,11 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"> </head>
 
 <body class="text-center">
-  <div class="section d-flex align-items-center h-75 cover-image" style="background-image: url(&quot;https://galimberti-git.imgix.net/assets/azienda/azienda_cover.jpg?w=1700&amp;auto=compress,format&quot;);">
+  <div class="section d-flex align-items-center h-75 cover-image" id="cover" id="cover" style="background-image: url(&quot;https://galimberti-git.imgix.net/assets/azienda/azienda_cover.jpg?w=1700&amp;auto=compress,format&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 mx-auto">
-          <h1 class="display-3 text-white">Tetti in legno</h1>
+          <h1 class="text-white">Tetti in legno</h1>
         </div>
       </div>
     </div>
@@ -82,12 +82,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 py-3">
-          <a href="https://goo.gl/maps/YYqjN5TfrqC2" onclick="ga('send','event','Info Footer','click','Mappa Location')" target="_blank" id="Mappa">
-            <img class="d-block mx-auto img-fluid" src="https://galimberti-git.imgix.net/assets/azienda/mappa.jpg?auto=compress,format" width="300" alt="Mappa sedi aziendali" title="Apri in Google maps"> </a>
+          <a href="https://goo.gl/maps/YYqjN5TfrqC2" onclick="ga('send','event','Info Footer','click','Mappa Location')" target="_blank" id="Mappa" title="Apri in Google maps">
+            <img class="d-block mx-auto img-fluid" src="https://galimberti-git.imgix.net/assets/azienda/mappa.jpg?auto=compress,format" width="300" alt="Mappa sedi aziendali"> </a>
         </div>
         <div class="col-lg-3 col-md-6 py-3">
           <h3 class="text-white mb-3">Dove trovarci</h3> <address>
-                            <a href="https://goo.gl/maps/YYqjN5TfrqC2" class="text-secondary" id="Address IT" onclick="ga('send','event','Info Footer','click','Address IT')" target="_blank"><b>Galimberti srl</b>
+                            <a href="https://goo.gl/maps/YYqjN5TfrqC2" class="text-secondary" id="Address IT" onclick="ga('send','event','Info Footer','click','Address IT')" target="_blank" title="Apri in Google maps"><b>Galimberti srl</b>
                             <br>Via Mulino, 21
                             <br>23871 &nbsp; Lomagna (LC) &nbsp; - &nbsp; Italia</a>
                             <br>
@@ -97,7 +97,7 @@
                             <a href="mailto:info@galimberti.eu" onclick="ga('send','event','Info Footer','click','Mail Footer')" id="Mail Footer" class="text-secondary"><i class="fa fa-envelope fa-fw"></i>info@galimberti.eu</a>
           </address>
           <hr> <address>
-                            <a href="https://goo.gl/maps/UYPTLXziSpr" class="text-secondary" id="Address CH" onclick="ga('send','event','Info Footer','click','Address CH')" target="_blank"><b>Galimberti Legno e Bioedilizia SA</b>
+                            <a href="https://goo.gl/maps/UYPTLXziSpr" class="text-secondary" id="Address CH" onclick="ga('send','event','Info Footer','click','Address CH')" target="_blank" title="Apri in Google maps"><b>Galimberti Legno e Bioedilizia SA</b>
                             <br>Via Cancelliere Molo, 11
                             <br>6500 &nbsp; Bellinzona &nbsp; - &nbsp; Svizzera</a>
                             <br>
@@ -108,9 +108,10 @@
           </address> </div>
         <div class="col-lg-6 col-md-12">
           <div class="row">
-            <div class="col-lg-11 offset-lg-1">
+            <div class="col-lg-1"></div>
+            <div class="col-11">
               <div class="row">
-                <div class="col-md-4 py-3">
+                <div class="py-3 col-md-4">
                   <h3 class="text-white mb-3">Azienda</h3>
                   <ul class="list-unstyled">
                     <a href="index.html" class="text-secondary" id="Footer Home">Home</a>
@@ -126,7 +127,7 @@
                     <a href="primolegno.html" class="text-secondary" id="Footer Primolegno">Primolegno</a>
                   </ul>
                 </div>
-                <div class="col-md-4 py-3">
+                <div class="py-3 col-md-4">
                   <h3 class="text-white mb-3">Prodotti</h3>
                   <ul class="list-unstyled">
                     <a href="case_in_legno.html" class="text-secondary" id="Footer Case">Case in legno</a>
@@ -144,7 +145,7 @@
                     <a href="tavoli.html" class="text-secondary" id="Footer Tavoli">Tavoli</a>
                   </ul>
                 </div>
-                <div class="col-md-4 py-3">
+                <div class="py-3 col-md-4">
                   <h3 class="text-white mb-3">Seguici</h3>
                   <ul class="list-unstyled">
                     <a href="http://eepurl.com/SVBab" class="text-secondary" id="Newsletter" onclick="ga('send','event','Social','click','Newsletter')" target="_blank">Newsletter</a>
