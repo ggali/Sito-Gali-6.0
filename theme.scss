@@ -48,7 +48,10 @@ $headings-font-weight: 100;
 $lead-font-weight: 300;
 
 
+
 @import 'bootstrap-4.0.0-beta.1';
+
+
 
 body {
   max-width: 1700px;
@@ -77,6 +80,7 @@ html     {
   background-color: #b8c1c3;
   font-weight : normal !important;
 }
+
 
 .bg-dark {
   color: theme-color("secondary");
@@ -219,4 +223,17 @@ html     {
       top:0px;
       background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
     }
+}
+
+
+li:hover {
+    cursor: pointer;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #f47e43;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #f47e43; 
 }
