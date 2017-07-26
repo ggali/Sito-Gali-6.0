@@ -208,7 +208,7 @@ $(window).on("ready", function() {
     }, 250);
   });
 
-
+  // modali persone index
   var buildPersone = function(data) {
     var $section = $("#persone");
     if ($section.length < 1)

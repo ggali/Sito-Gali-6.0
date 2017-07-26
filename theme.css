@@ -5790,18 +5790,19 @@ html {
   border-color: transparent; }
   #persone .card .card-block {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
+    padding-left: 10px;
     width: 100%;
     color: white;
     background: linear-gradient(transparent 0%, black 70%); }
 
 .full-screen {
-  z-index: 100000;
+  background-color: gold;
+  z-index: 1;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: black;
   overflow-y: scroll;
   height: 100%;
   cursor: zoom-out; }
