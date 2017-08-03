@@ -5843,7 +5843,6 @@ html {
 
 .cover-image {
   background-position: center;
-  overflow: hidden;
   position: relative; }
   .cover-image > *:first-child:before {
     content: '';
@@ -5853,7 +5852,7 @@ html {
     position: absolute;
     left: 0px;
     top: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%); }
+    background: linear-gradient(rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.5) 100%); }
 
 li:hover {
   cursor: pointer; }
