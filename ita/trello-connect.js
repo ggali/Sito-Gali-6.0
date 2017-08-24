@@ -165,25 +165,6 @@ $(window).on("ready", function() {
 
   });
 
-  // go to top
-  $("body").append('<a href="#top" class="m-0 go-top"><i class="fa fa-fw fa-sort-up d-block"></i><label class="m-0" style="font-size:10px; line-height:10px">SU</label></a>');
-  $(window).scroll(function(event) {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 150) {
-      $(".go-top").addClass("show");
-    } else {
-      $(".go-top").removeClass("show");
-    }
-  });
-
-  $('.go-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 500);
-  });
-
-
-
   // video autoplay autostop
   var timeout = null;
   $(window).scroll(function() {
