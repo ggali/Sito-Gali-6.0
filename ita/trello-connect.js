@@ -16,7 +16,7 @@
 var markscale = 10;   // percentuale larghezza watermark rispetto all'immagine
 var markpad = 10;     // padding watermark
 var markurl = "https://raw.githubusercontent.com/ggali/Sito-Gali-7.0/master/assets/azienda/galimberti_watermark_white.png";
-var imagesLimit = 25;
+var imagesLimit = 15;     // numero di immagini prima del bottone "Guarda altre immagini"
 
 // init scrolldepth
 jQuery.scrollDepth({
