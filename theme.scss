@@ -51,8 +51,6 @@ $lead-font-weight: 300;
 
 @import 'bootstrap-4.0.0-beta.1';
 
-
-
 body {
   max-width: 1700px;
   margin:auto;
@@ -204,5 +202,5 @@ li:hover {
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-    background-color: #f47e43; 
+    background-color: #f47e43;
 }
