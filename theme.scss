@@ -1,9 +1,9 @@
-@font-face { 
+@font-face {
   font-family: 'Proxima';
   font-style: normal;
   font-weight: normal;
-  src: url('ProximaNova-Regular.otf') format('truetype');
-}  
+  src: url('ProximaNo-Regular.otf') format('truetype');
+}
 
 @font-face {
   font-family: 'Proxima';
@@ -26,105 +26,30 @@
   src: url('ProximaNova-Thin.ttf') format('truetype');
 }
 
+$body-bg: white;
+
+$theme-colors: (
+  primary: #f47e43,
+ 	secondary: #818a91,
+ 	success:#51cf66,
+ 	warning:orange,
+ 	danger:red,
+  info: #3bc9db,
+  light: #f7f7f7,
+ 	dark: #373a3c
+);
+
+$body-color: #373a3c;
+
+$link-color: #f47e43;
+
+$font-family-base: "Proxima";
+$headings-font-weight: 100;
+$lead-font-weight: 300;
 
 
 
-// Colors
-//
-// Grayscale and brand colors for use across Bootstrap
-
-$gray-dark : #373a3c !default;
-$gray : #55595c !default;
-$gray-light : #818a91 !default;
-$gray-lighter : #eceeef !default;
-$gray-lightest : #F0F0F0 !default;
-
-$brand-primary : #f47e43;
-$brand-success : #5cb85c !default;
-$brand-info : $gray;
-$brand-warning : #f0ad4e !default;
-$brand-danger : #d9534f !default;
-
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-flex : false !default;
-$enable-rounded : true !default;
-$enable-shadows : false !default;
-$enable-gradients : false !default;
-$enable-transitions : false !default;
-$enable-hover-media-query : false !default;
-$enable-grid-classes : true !default;
-
-
-// Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-
-$spacer : 1rem !default;
-$spacer-x : $spacer !default;
-$spacer-y : $spacer !default;
-$border-width : 1px !default;
-
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg : white;
-$body-color : #373a3c !default;
-
-
-// Links
-//
-// Style anchor elements.
-
-$link-color : $brand-primary !default;
-$link-decoration : none !default;
-$link-hover-color : darken($link-color, 15%) !default;
-$link-hover-decoration : underline !default;
-
-
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif : "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif : Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace : Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base : Proxima;
-
-// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root : 18px !default;
-
-$font-size-base : 1rem !default;
-$font-size-lg : 1.25rem !default;
-
-$font-size-sm : .5rem !default;
-$font-size-xs : .1rem !default;
-
-$headings-font-family : Proxima;
-
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths : (
-sm: 576px,
-md: 720px,
-lg: 940px,
-xl: 1240px 
-) !default;
-
-
-
-@import 'bootstrap-4.0.0-alpha.4';
-@import 'pingendo-bootstrap';
-
+@import 'bootstrap-4.0.0-beta.1';
 
 body {
   max-width: 1700px;
@@ -148,11 +73,20 @@ body {
   }
 }
 
+html     {
+  height : 100%;
+  background-color: #b8c1c3;
+  font-weight : normal !important;
+}
+
+
+.bg-dark {
+  color: theme-color("secondary");
+}
 
 #photos .container     {
   max-width : 940px;
 }
-
 
 @media (max-width: 544px) {
   #photos .container img {
@@ -160,205 +94,8 @@ body {
   }
 }
 
-html     {
-  height : 100%;
-  background-color: #b8c1c3;
-  font-weight : normal !important;
-}
-
-.lead {
-  font-weight: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 100;
-}
-
-.menu {
-font-size:70%;
-  line-height:200%;
-}
-
-.section .background-image {
-  z-index: 0;
-}
-  
-.section .background-video           {
-  object-position : center left !important;
-}
-
-.section .background-video-holder:after {
-  position:absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height: 100%;
-  content: '';
-  background : linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
-}
-
-.section .background-image:after {
-  position:absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height: 100%;
-  content: url(#);
-  background : linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
-}
-
-.section-fill-height .carousel-item img {
-  object-position : center left !important;
-  object-fit: cover;
-  width: 100%;
-  height : 100%;
-}
-.section-fill-height           {
-  max-height : 80%;
-  overflow: hidden;
-}
-
-.map_lg           {
-  max-height : 50%;
-  overflow: hidden;
-}
-
-.map_xs           {
-  max-height : 80%;
-  overflow: hidden;
-}
-
-.sticky           {
-  position : -webkit-sticky;
-  position : sticky;
-  top : 0px;
-}
-
-
-.navbar-brand           {
-  position : relative;
-  top : 0px;
-}
-
-.navbar.bg-inverse {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  background: transparent !important; 
-  transition: all 0.5s ease;
-  border-radius: 0px;
-}
-
-.navbar.bg-black {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  background: #373a3c !important; 
-  transition: all 0.5s ease;
-  border-radius: 0px;
-}
-
-.navbar .container {
-  transition: all 0.5s;
-}
-
-@media (min-width: 768px) {
-  .navbar.scrolled {
-    padding: 0px !important;
-    position: fixed;
-    background-color: rgba(55,58,60,0.9) !important;
-    max-width: 1700px;
-    height: 74px;
-  }
-
-  .navbar.scrolled .container {
-    margin-top: 0.0rem !important;
-    margin-bottom: 0.0rem !important;
-    transform: scale(0.8)
-  }
-
-}
-
-
-.navbar .nav {
-  a {
-      color: white !important;
-    }
-    .active {
-      border-bottom: 3px solid $brand-primary;
-      z-index:10;
-      a {
-        color: white !important; 
-      }
-    }
-  
-  .active2::before {
-    width:100px;
-    height: 100px;
-    background-color: $brand-primary;
-    display: block;
-    position:absolute;
-    top:0px;
-    content:'';
-    z-index:9;
-    }
-  
-  img {
-  height : 36px;
-  }
-}
-
-.navbar .nav-dark {
-  .active {
-      border-bottom: 3px solid $brand-primary;
-
-    }
-}
-
-.noscroll     {
-  overflow : hidden;
-}
-
-
 .trello img      {
   cursor : zoom-in;
-}
-
-
-
-.go-top       {
-  display : block;
-  line-height : 30px;
-  text-align : center;
-  font-size : 20px;
-  position : fixed;
-  bottom : -40px;
-  right : 20px;
-  padding : 5px;
-  -webkit-transition : all 0.5s ease;
-  -moz-transition : all 0.5s ease;
-  -o-transition : all 0.5s ease;
-  transition : all 0.5s ease;
-  background-color : #f47e43;
-  color : #FFFFFF;
-  text-decoration : none;
-  -moz-border-radius : 2px;
-  -webkit-border-radius : 2px;
-  border-radius : 2px;
-}
-
-.go-top.show       {
-  bottom : 20px;
-}
-
-.go-top:hover, .go-top:focus       {
-  background-color : #aa582e;
-  color : #FFFFFF;
-}
-
-.gray     {
-  background-color : $gray-dark;
-  color : white;
 }
 
 #persone .card     {
@@ -369,38 +106,36 @@ font-size:70%;
 
   .card-block {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
+    padding-left: 10px;
     width: 100%;
     color: white;
     background : linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
-   }  
+   }
 }
 
-
-
 .full-screen       {
-
-  z-index : 100000;
+	background-color: gold;
+  z-index : 1;
   position : fixed;
   top : 0px;
   left : 0px;
   width : 100%;
-  background-color : black;
   overflow-y : scroll;
   height : 100%;
   cursor: zoom-out;
-  
+
   > .btn-group {
     position: fixed;
-    top: 10px; 
+    top: 10px;
     right: 1px;
-  } 
+  }
 
   .dropdown-menu-right {
     right: -90px;
   }
 
-  img { 
+  img {
     width:100%;
   }
 }
@@ -419,30 +154,19 @@ font-size:70%;
 }
 
 .modal-content {
-  background-color: $gray-dark;
-  
-  
+  background-color: #333;
+
   p {
     line-height: 200%
-  }  
+  }
 }
 
 .modal-header img {
   height: 25px;
 }
 
-hr.light {
-  height: 1px;
-  background-color: gray;
-  border: none;
-}
-
-p.CTA  {
-   line-height:200%;
- }
-
-.primochiaro {
-  background-image: url('https://galimberti-git.imgix.net/assets/primolegno/Pattern_primochiaro.png?q=30');
+.modal-backdrop {
+  background-color:rgba(0,0,0,0.6);
 }
 
 .primoscuro {
@@ -450,36 +174,45 @@ p.CTA  {
 }
 
 .primoarancio {
-  background-image: url('https://galimberti-git.imgix.net/assets/primolegno/Pattern_primoarancio.png?q=30');
+  background-image: url('../assets/primolegno/Pattern_primoarancio.png?auto=compress,format');
 }
 
-.primobianco {
-  background-color: rgba(255,255,255,1);
+.primochiaro {
+  background-image: url('../assets/primolegno/Pattern_primochiaro.png?auto=compress,format');
 }
 
-.overlay_map {
-  background:transparent;
-  position:relative;
-  width:1250px;
-  height:250px;
-  top:250px;
-  margin-top:-250px;
+.cover-image {
+ background-position: center;
+    position:relative;
+    > *:first-child:before {
+      content:'';
+      width:100%;
+      height:100%;
+      display:block;
+      position:absolute;
+      left:0px;
+      top:0px;
+      background: linear-gradient(rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.5) 100%);
+    }
 }
 
 
-/* FIXES SPECIFICI PER DEVICES */
-body .no-videoautoplay {
-  display: none;
+li:hover {
+    cursor: pointer;
 }
 
-.no-video .no-video2 {
-  display:none;
+.dropdown-divider {
+  border-top: 1px solid #f47e43;
 }
 
-.no-videoautoplay .no-videoautoplay {
-  display:block;
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #212224;
 }
 
-body.no-video .background-video-holder {
-  display:none;
+.nav-link:hover, .nav-link.active {
+  border-bottom: 3px solid #f47e43;
+}
+
+.nav-link {
+  border-bottom: 3px solid transparent;
 }
