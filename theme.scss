@@ -211,6 +211,8 @@ li:hover {
 
 .nav-link:hover, .nav-link.active {
   border-bottom: 3px solid #f47e43;
-  line-height: 20px;
 }
 
+.nav-link {
+  border-bottom: 3px solid transparent;
+}
