@@ -5746,33 +5746,6 @@ html {
 .bg-dark {
   color: #818a91; }
 
-.go-top {
-  display: block;
-  line-height: 30px;
-  text-align: center;
-  font-size: 20px;
-  position: fixed;
-  bottom: -40px;
-  right: 20px;
-  padding: 5px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  background-color: #f47e43;
-  color: white;
-  text-decoration: none;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px; }
-
-.go-top.show {
-  bottom: 20px; }
-
-.go-top:hover, .go-top:focus {
-  background-color: #aa582e;
-  color: white; }
-
 #photos .container {
   max-width: 940px; }
 
@@ -5862,3 +5835,6 @@ li:hover {
 
 .dropdown-item:focus, .dropdown-item:hover {
   background-color: #f47e43; }
+
+.nav-link:hover {
+  border-bottom: 2px solid #f47e43; }
