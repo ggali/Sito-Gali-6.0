@@ -5840,4 +5840,5 @@ li:hover {
   background-color: #212224; }
 
 .nav-link:hover, .nav-link.active {
-  border-bottom: 3px solid #f47e43; }
+  border-bottom: 3px solid #f47e43;
+  line-height: 20px; }
