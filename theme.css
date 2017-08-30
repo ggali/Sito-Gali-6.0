@@ -5805,6 +5805,9 @@ html {
 .modal-header img {
   height: 25px; }
 
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6); }
+
 .primoscuro {
   background-color: rgba(0, 0, 0, 0.065); }
 
