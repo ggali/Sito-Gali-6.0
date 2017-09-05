@@ -196,6 +196,14 @@ html     {
     }
 }
 
+.index-opacity {
+      background: rgba(0, 0, 0, 0.5);
+  }
+
+.index-opacity:hover {
+      background: rgba(0, 0, 0, 0.7);
+  }
+
 
 li:hover {
     cursor: pointer;
