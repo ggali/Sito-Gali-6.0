@@ -5683,13 +5683,19 @@ html {
     position: absolute;
     left: 0px;
     top: 0px;
-    background: linear-gradient(170deg, rgba(55, 58, 60, 0.9), rgba(244, 126, 67, 0.9)); }
+    background: linear-gradient(170deg, rgba(35, 21, 87, 0.6) 0%, rgba(68, 16, 122, 0.6) 29%, rgba(255, 19, 27, 0.6) 67%, rgba(255, 248, 0, 0.6) 100%);
+    background: linear-gradient(-225deg, rgba(255, 226, 159, 0.8) 0%, rgba(255, 169, 159, 0.8) 50%, rgba(255, 113, 154, 0.8) 100%);
+    background: linear-gradient(-25deg, rgba(244, 126, 67, 0.8) 0%, rgba(24, 12, 6, 0.8) 100%); }
 
 .index-opacity {
   background: rgba(0, 0, 0, 0.5); }
 
 .index-opacity:hover {
-  background: rgba(0, 0, 0, 0.7); }
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.03, 1.03); }
+
+.index-image {
+  background-size: cover; }
 
 li:hover {
   cursor: pointer; }
