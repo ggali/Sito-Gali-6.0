@@ -24,86 +24,8 @@ jQuery.scrollDepth({
   nonInteraction: false
 });
 
-// jquery visible
-// !function(t){var i=t(window);t.fn.visible=function(t,e,o){if(!(this.length<1)){var r=this.length>1?this.eq(0):this,n=r.get(0),f=i.width(),h=i.height(),o=o?o:"both",l=e===!0?n.offsetWidth*n.offsetHeight:!0;if("function"==typeof n.getBoundingClientRect){var g=n.getBoundingClientRect(),u=g.top>=0&&g.top<h,s=g.bottom>0&&g.bottom<=h,c=g.left>=0&&g.left<f,a=g.right>0&&g.right<=f,v=t?u||s:u&&s,b=t?c||a:c&&a;if("both"===o)return l&&v&&b;if("vertical"===o)return l&&v;if("horizontal"===o)return l&&b}else{var d=i.scrollTop(),p=d+h,w=i.scrollLeft(),m=w+f,y=r.offset(),z=y.top,B=z+r.height(),C=y.left,R=C+r.width(),j=t===!0?B:z,q=t===!0?z:B,H=t===!0?R:C,L=t===!0?C:R;if("both"===o)return!!l&&p>=q&&j>=d&&m>=L&&H>=w;if("vertical"===o)return!!l&&p>=q&&j>=d;if("horizontal"===o)return!!l&&m>=L&&H>=w}}}}(jQuery);
-(function($){
-
-    /**
-     * Copyright 2012, Digital Fusion
-     * Licensed under the MIT license.
-     * http://teamdf.com/jquery-plugins/license/
-     *
-     * @author Sam Sehnert
-     * @desc A small plugin that checks whether elements are within
-     *       the user visible viewport of a web browser.
-     *       only accounts for vertical position, not horizontal.
-     */
-    var $w = $(window);
-    $.fn.visible = function(partial,hidden,direction){
-
-        if (this.length < 1)
-            return;
-
-        var $t        = this.length > 1 ? this.eq(0) : this,
-            t         = $t.get(0),
-            vpWidth   = $w.width(),
-            vpHeight  = $w.height(),
-            direction = (direction) ? direction : 'both',
-            clientSize = hidden === true ? t.offsetWidth * t.offsetHeight : true;
-
-        if (typeof t.getBoundingClientRect === 'function2'){
-
-            // Use this native browser method, if available.
-            var rec = t.getBoundingClientRect(),
-                tViz = rec.top    >= 0 && rec.top    <  vpHeight,
-                bViz = rec.bottom >  0 && rec.bottom <= vpHeight,
-                lViz = rec.left   >= 0 && rec.left   <  vpWidth,
-                rViz = rec.right  >  0 && rec.right  <= vpWidth,
-                vVisible   = partial ? tViz || bViz : tViz && bViz,
-                hVisible   = partial ? lViz || rViz : lViz && rViz;
-
-            if(direction === 'both')
-                return clientSize && vVisible && hVisible;
-            else if(direction === 'vertical')
-                return clientSize && vVisible;
-            else if(direction === 'horizontal')
-                return clientSize && hVisible;
-        } else {
-
-            var viewTop         = $w.scrollTop(),
-                viewBottom      = viewTop + vpHeight,
-                viewLeft        = $w.scrollLeft(),
-                viewRight       = viewLeft + vpWidth,
-                offset          = $t.offset(),
-                _top            = offset.top,
-                _bottom         = _top + $t.height(),
-                _left           = offset.left,
-                _right          = _left + $t.width(),
-                compareTop      = partial === true ? _bottom : _top,
-                compareBottom   = partial === true ? _top : _bottom,
-                compareLeft     = partial === true ? _right : _left,
-                compareRight    = partial === true ? _left : _right;
-
-            if(direction === 'both')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-            else if(direction === 'vertical') {
-              console.log(compareTop ,viewTop);
-              console.log(compareBottom ,viewBottom);
-              return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-            }
-            else if(direction === 'horizontal')
-                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-        }
-    };
-
-})(jQuery);
 
 
-// froogaloop
-var Froogaloop=function(){function e(a){return new e.fn.init(a)}function g(a,c,b){if(!b.contentWindow.postMessage)return!1;a=JSON.stringify({method:a,value:c});b.contentWindow.postMessage(a,h)}function l(a){var c,b;try{c=JSON.parse(a.data),b=c.event||c.method}catch(e){}"ready"!=b||k||(k=!0);if(!/^https?:\/\/player.vimeo.com/.test(a.origin))return!1;"*"===h&&(h=a.origin);a=c.value;var m=c.data,f=""===f?null:c.player_id;c=f?d[f][b]:d[b];b=[];if(!c)return!1;void 0!==a&&b.push(a);m&&b.push(m);f&&b.push(f);
-return 0<b.length?c.apply(null,b):c.call()}function n(a,c,b){b?(d[b]||(d[b]={}),d[b][a]=c):d[a]=c}var d={},k=!1,h="*";e.fn=e.prototype={element:null,init:function(a){"string"===typeof a&&(a=document.getElementById(a));this.element=a;return this},api:function(a,c){if(!this.element||!a)return!1;var b=this.element,d=""!==b.id?b.id:null,e=c&&c.constructor&&c.call&&c.apply?null:c,f=c&&c.constructor&&c.call&&c.apply?c:null;f&&n(a,f,d);g(a,e,b);return this},addEvent:function(a,c){if(!this.element)return!1;
-var b=this.element,d=""!==b.id?b.id:null;n(a,c,d);"ready"!=a?g("addEventListener",a,b):"ready"==a&&k&&c.call(null,d);return this},removeEvent:function(a){if(!this.element)return!1;var c=this.element,b=""!==c.id?c.id:null;a:{if(b&&d[b]){if(!d[b][a]){b=!1;break a}d[b][a]=null}else{if(!d[a]){b=!1;break a}d[a]=null}b=!0}"ready"!=a&&b&&g("removeEventListener",a,c)}};e.fn.init.prototype=e.fn;window.addEventListener?window.addEventListener("message",l,!1):window.attachEvent("onmessage",l);return window.Froogaloop=
-window.$f=e}();
 
 
 /*! modernizr 3.3.1 (Custom Build) | MIT *
@@ -121,73 +43,6 @@ $(window).on("ready", function() {
   });
 
 
-  // try to start video and connect play button
-  var _playing = false;
-  window.toggleVideo = function() {
-    $('video')[0].play();
-  }
-
-  if ($(".section-fill-height video").length) {
-    $(".section-fill-height video")[0].play();
-    $(".section-fill-height video").on("playing", function() {
-      $(".section-fill-height a.need-video").remove();
-    });
-  }
-
-
-  // $(".section-fill-height video").on("pause", function() {
-  //   _playing = false;
-  //   $(".section-fill-height .need-video.fa").removeClass("fa-pause-circle-o");
-  //   $(".section-fill-height .need-video.fa").addClass("fa-play-circle-o");
-  // });
-
-
-  // optimize background img in header
-  var w = Math.max(window.screen.width, window.screen.height);
-
-  $.ajaxSetup({ cache: true });
-  $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
-    FB.init({
-      appId: '532070683628144',
-      version: 'v2.5' // or v2.0, v2.1, v2.2, v2.3
-    });
-    // $('#loginbutton,#feedbutton').removeAttr('disabled');
-    // FB.getLoginStatus(updateStatusCallback);
-  });
-
-  // add special class for navbar based on scroll position
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll > 16)
-      $(".navbar").first().addClass("scrolled");
-    else
-      $(".navbar").first().removeClass("scrolled");
-
-  });
-
-  // video autoplay autostop
-  var timeout = null;
-  $(window).scroll(function() {
-    if (timeout)
-      clearTimeout(timeout);
-
-    timeout = setTimeout(function() {
-      $('.trello iframe').each(function() {
-
-        var player = $f(this);
-
-        var visible = $(this).visible(false, true,"vertical");
-        console.log(visible);
-        if(visible) {
-          console.log("play");
-          player.api("play");
-        } else {
-          console.log("puse");
-          player.api("pause");
-        }
-      })
-    }, 250);
-  });
 
   // modali persone index
   var buildPersone = function(data) {
@@ -406,7 +261,7 @@ $(window).on("ready", function() {
       // create the wrapper and the full width image
       var $wrapper = $("<div class='full-screen'>\
                           <div class='btn-group mt-1 mx-1  pull-xs-right'>\
-                            <label class='btn btn-info' style='pointer-events:none'>N° " + index + "</label>\
+                            <!--<label class='btn btn-info' style='pointer-events:none'>N° " + index + "</label>\
                             <div class='btn-group'>\
                               <button class='btn btn-info fa fa-chain' data-toggle='dropdown'></button>\
                               <div class='dropdown-menu dropdown-menu-right p-1'>\
@@ -414,8 +269,8 @@ $(window).on("ready", function() {
                               </div>\
                             </div>\
                             <a class='btn btn-info fa fa-envelope' href='mailto:?body=" + document.location + "'></a>\
-                            <a class='btn btn-info fa fa-facebook'></a>\
-                            <a class='btn btn-info fa fa-close'></a>\
+                            <a class='btn btn-info fa fa-facebook'></a>-->\
+                            <a class='btn btn-light fa fa-close'></a>\
                           </div>\
                         </div>");
 
@@ -423,20 +278,6 @@ $(window).on("ready", function() {
       $img.attr("src", $(img).attr("src"));
       $wrapper.append($img);
 
-      $wrapper.find(".fa-facebook").on("click", function() {
-        FB.ui(
-        {
-          method: 'feed',
-          name: 'Galimberti - Legno e Bioedilizia',
-          link: document.location.href,
-          picture: $(img).attr("src"),
-          caption: 'www.galimberti.eu',
-          description: 'Progettiamo e fabbrichiamo costruzioni, coperture, facciate e pavimenti in legno e materiali naturali.',
-          message: ''
-        }
-      );
-
-      });
 
      $wrapper.find(".fa-close").on("click", function() {
         $("body").removeClass("noscroll");
@@ -469,8 +310,6 @@ $(window).on("ready", function() {
     }
 
 
-
-
     try {
       var index = Number(document.location.hash.replace("#", ""));
       if (index != 0)
@@ -483,3 +322,82 @@ $(window).on("ready", function() {
   });
 
 });
+
+// smooth scroll
+
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top -80
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+
+  (function() {
+
+  	var style = function(el) {
+  		el.style.setProperty("transition", "all .5s ease-out");
+  		el.style.setProperty("background", "transparent", "important");
+  		el.style.setProperty("box-shadow", "none", "important");
+  		el.style.setProperty("transform", "scale(1.1)", "important");
+  		el.style.setProperty("transform-origin", "50% -10%", "important");
+  	}
+
+  	var unstyle = function(el) {
+  		el.style.removeProperty("background");
+  		el.style.removeProperty("box-shadow");
+  		el.style.removeProperty("transform");
+  		el.style.removeProperty("transform-origin");
+  	}
+
+  	var s = "<style id='navbar-cover'>.navbar.fixed-top {transform-origin:50% -10%;transform:scale(1.1) !important;box-shadow: none;background: transparent !important;}</style>";
+  	document.write(s);
+
+  	document.addEventListener("DOMContentLoaded", function(event) {
+      	style(document.querySelector(".navbar.fixed-top"));
+      	document.getElementById("navbar-cover").remove();
+    	});
+
+  	window.addEventListener("scroll", function() {
+
+  		var scroll = $(window).scrollTop();
+  		console.log("scroll", scroll)
+
+
+  		if (scroll > 15)
+  			unstyle(document.querySelector(".navbar.fixed-top"));
+  		else
+  			style(document.querySelector(".navbar.fixed-top"));
+
+  	})
+  })();

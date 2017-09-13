@@ -116,7 +116,7 @@ html     {
 
 .full-screen       {
 	background-color: gold;
-  z-index : 1;
+  z-index : 10000;
   position : fixed;
   top : 0px;
   left : 0px;
@@ -230,4 +230,9 @@ li:hover {
 
 .nav-link {
   border-bottom: 3px solid transparent;
+}
+
+
+.noscroll {
+	overflow:hidden;
 }
